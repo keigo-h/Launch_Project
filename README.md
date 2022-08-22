@@ -1,10 +1,10 @@
-# Launch Project - Formula 1 Betting App
+# Launch Project - Formula 1 Betting App (First CS Project)
 
-A betting website which allows users to record their bets and see if they have won.
+A betting website that allows users to record their bets and see if they have won.
 
 ## Introduction 
 
-This app will keep track of bets placed on Formula 1 races. The user will input a unique username, select a driver, and input a betting value in USD. The inputs will be stored in a database and results will be received from an external API. The bets will be checked and winners and their respective winnings will be posted. In this application there are three pages. The home page which greets the user, a betting page where the user is able to submit their bets and a results page where the results of the bets are posted. 
+This app will keep track of bets placed on Formula 1 races. The user will input a unique username, select a driver, and input a betting value in USD. The inputs will be stored in a database and results will be received from an external API. The bets will be checked and winners and their respective winnings will be posted. In this application, there are three pages. The home page that greets the user, a betting page where the user can submit their bets, and a results page where the results of the bets are posted. 
 
 ## App Details
 
@@ -100,7 +100,7 @@ UNIQUE INDEX `userName_UNIQUE` (`userName` ASC) VISIBLE);
 
 ## Known Problems
 
-No bugs will appear on console, however, there is an inefficiency within one aspect of the program.
+No bugs will appear on the console, however, there is an inefficiency within one aspect of the program.
  
 
 Within the RaceResults.js component there is a section of code which receives data from the backend.
@@ -117,7 +117,7 @@ return ()=>isMounted = false;
 ```
 
 
-The check value in the parameter is used to trigger the hook whenever the value of check changes. Ideally a .then method as shown below returning a promise should be used.
+The check value in the parameter is used to trigger the hook whenever the value of check changes. Ideally a ```.then``` method as shown below returning a promise should be used.
  
 
 ```
@@ -130,9 +130,9 @@ return value.userName !== userName
 }
 ```
 
-This should have the data on the web page be automatically deleted without the need to manually click the refresh button. However, since the .then method was not returning the desired result a workaround was necessary.
+This should have the data on the web page be automatically deleted without the need to manually click the refresh button. However, since the ```.then``` method was not returning the desired result a workaround was necessary.
 
-A function was created to change the value of the check to trigger the hook but a setTimeout was necessary to ensure that the data was deleted before running the hook.
+A function was created to change the value of the check to trigger the hook but a ```setTimeout``` was necessary to ensure that the data was deleted before running the hook.
 
 
 ```
@@ -143,7 +143,7 @@ setCheck(check + 1)
 }
 ```  
 
-On the onClick event both functions, one to delete the desired data and the other to run the hook;
+On the ```onClick``` event both functions, one to delete the desired data and the other to run the hook;
   
 
 ```
